@@ -1,0 +1,19 @@
+Feature: Searching "Prowly Media Monitoring" on the bing.com/<Filter> page results with Prowly being on top
+Scenario: I have a clear browser and am looking for "Prowly Media Monitoring" in a <Filter> cathegory
+Given: I have a new browser session (Incognito mode)
+And: I have bing.com/<Filter> page open
+And: I can see search input active
+When: I enter the "Prowly Media Monitoring" text into the search input
+And: I hit 'enter'
+Then: I can see <What I see>
+And: I can click <What I click>
+
+Examples:
+| Filter | What I see                                                                               | What I click                                  |
+| search | prowly.com domain as a 1st search result                                                 | the links, with 1st one to prowly.com domain  |
+| news   | all atricles about prowly.com                                                            | any link to article or any cathegory on left  | 
+| images | all images related to prowly.com like screenshots from the homepage and logos            | any image to see it bigger                    |
+| videos | videos about Prowly, mostly from youtube.com                                             | any video to watch                            |
+| maps   | no results                                                                               | nothing related to prowly.com                 |
+| shop   | shops offers related to monitoring                                                       | nothing related to prowly.com                 |
+| travel | being redirected back to /search results with prowly.com domain as a 1st search result   | any link on the main search page              |
