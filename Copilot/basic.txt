@@ -1,0 +1,11 @@
+Feature: Searching for "Prowly Media Monitoring" in a Chat window on bing.com gives you information about media monitoring tool in Prowly
+Scenario: I have a clear browser and am looking for "Prowly Media Monitoring" in a Copilot module
+Given: I have a new browser session (Incognito mode)
+And: I have bing.com page open
+And: I can see search input active
+When: I enter the "Prowly Media Monitoring" text into the search input
+And: I hit 'enter'
+And: I click on the 'chat' icon
+Then: I can see being directed to AI-powered copilot 
+And: I can see my query being sent as my message to the Chat
+And: I can see the response being generated automatically
